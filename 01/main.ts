@@ -14,7 +14,9 @@ export function sumDistances(...lists: [number[], number[]]): number {
 
   let distance = 0;
   for (const pair of pairs) {
-    distance += pair.reduce((previous, current) => Math.abs(previous - current));
+    distance += pair.reduce((previous, current) =>
+      Math.abs(previous - current)
+    );
   }
 
   return distance;
