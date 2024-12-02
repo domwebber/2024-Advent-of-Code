@@ -11,13 +11,15 @@ const demoLevels = [
 ];
 
 Deno.test(function countSafeTest() {
+  const count = demoLevels.reduce(
+    (count, current) => {
+      return isSafeLevel(current) ? ++count : count;
+    },
+    0,
+  );
+
   assertEquals(
-    demoLevels.reduce(
-      (count, current) => {
-        return isSafeLevel(current) ? ++count : count;
-      },
-      0,
-    ),
+    count,
     2,
   );
 });
