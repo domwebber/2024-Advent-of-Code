@@ -66,5 +66,6 @@ if (import.meta.main) {
               ),
         ),
   );
+
   console.log("Count of Safe Levels =", countSafe(...lines));
 }
